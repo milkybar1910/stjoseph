@@ -31,7 +31,6 @@ const Internship = () => {
     organizationname: "",
     duration: "",
     location: "",
-    certificate: "",
     From: "",
     To: "",
     formData: new FormData(),
@@ -43,7 +42,6 @@ const Internship = () => {
     organizationname,
     duration,
     location,
-
     From,
     To,
     formData,
@@ -87,7 +85,6 @@ const Internship = () => {
             jobname: "",
             organizationname: "",
             duration: "",
-            certificate: "",
             location: "",
             formData: new FormData(),
           });
