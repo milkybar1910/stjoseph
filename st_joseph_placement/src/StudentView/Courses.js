@@ -30,7 +30,6 @@ const Courses = () => {
     coursename: "",
     platformname: "",
     duration: "",
-    certificate: "",
     To: "",
     From: "",
     formData: new FormData(),
@@ -77,7 +76,6 @@ const Courses = () => {
             coursename: "",
             platformname: "",
             duration: "",
-            certificate: "",
             From: "",
             To: "",
             formData: new FormData(),
@@ -89,9 +87,7 @@ const Courses = () => {
   };
 
   //redirecting to home page
-  if (redirect) {
-    return <Redirect to="/student/home" />;
-  }
+  if (redirect) <Redirect to="/student/home" />;
 
   return (
     <div className="container-fluid">
