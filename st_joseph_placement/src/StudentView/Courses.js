@@ -87,7 +87,7 @@ const Courses = () => {
   };
 
   //redirecting to home page
-  if (redirect) <Redirect to="/student/home" />;
+  if (redirect) return <Redirect to="/student/home" />;
 
   return (
     <div className="container-fluid">
