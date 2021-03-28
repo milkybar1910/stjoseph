@@ -98,7 +98,7 @@ const Internship = () => {
   if (redirect) return <Redirect to="/student/home" />;
 
   return (
-    <div className="container-fluid">
+    <div>
       <Menu />
 
       {/* The Form  */}
