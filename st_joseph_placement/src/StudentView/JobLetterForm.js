@@ -15,11 +15,10 @@ import "react-toastify/dist/ReactToastify.css";
 //To redirect to Home Page once the upload is success
 import { Redirect } from "react-router-dom";
 
-//For Input Type SELECT
-import Select from "react-select";
-
 //For getting Admin permission to Submit the Course
 import { getToggleDetails } from "../AdminView/helper/Adminapicalls";
+
+import Select from "react-select";
 
 const JobLetterForm = () => {
   //to redirect to homepage
@@ -102,11 +101,11 @@ const JobLetterForm = () => {
   if (redirect) return <Redirect to="/student/home" />;
 
   return (
-    <div className="container-fluid">
+    <div>
       <Menu />
 
       {/* The Form  */}
-      <form className=" container shadow-lg mt-5 p-4 mb-5">
+      <form className=" container shadow mt-5 p-4 mb-5">
         <div className="form-group ">
           <label className="text-white">Job Title *</label>
           <input
@@ -168,7 +167,7 @@ const JobLetterForm = () => {
         </div>
         <button
           type="submit"
-          className="btn btn-block btn-warning  "
+          className="btn btn-block btn-warning  font-weight-bold text-uppercase mt-4"
           onClick={onSubmit}
           disabled={disabled}
         >

@@ -102,7 +102,7 @@ const Internship = () => {
       <Menu />
 
       {/* The Form  */}
-      <form className=" container shadow-lg my-5 p-4">
+      <form className=" container shadow my-5 p-4">
         <div className="form-group ">
           <label className="text-white">Job Name *</label>
           <input
@@ -178,7 +178,7 @@ const Internship = () => {
         </div>
         <button
           type="submit"
-          className="btn btn-block btn-warning "
+          className="btn btn-block btn-warning font-weight-bold text-uppercase mt-4 "
           onClick={onSubmit}
           disabled={disabled}
         >

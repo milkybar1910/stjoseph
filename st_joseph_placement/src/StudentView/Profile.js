@@ -413,7 +413,7 @@ const Profile = () => {
     return (
       <div>
         <h3 className="text-white text-center mt-5">EDIT YOUR PROFILE</h3>
-        <form className=" container shadow-lg my-5 p-4">
+        <form className=" container shadow my-5 p-4">
           <div className="form-group">
             <label className="text-white">Register Number *</label>
             <input
@@ -1330,7 +1330,7 @@ const Profile = () => {
           </div>
 
           <button
-            className="btn btn-block btn-warning mt-4"
+            className="btn btn-block btn-warning mt-4 font-weight-bold text-uppercase "
             onClick={OnEditSubmission}
             disabled={disabled}
           >
@@ -1389,7 +1389,7 @@ const Profile = () => {
           </ol>
           <div className="carousel-inner">
             <div className="container-fluid my-5 carousel-item active">
-              <div className="bg-dark  container shadow-lg p-3">
+              <div className="bg-darkblack  container shadow p-3">
                 <div className="list-group">
                   <li className="list-group-item p-4">
                     <span className="font-weight-bold text-uppercase">
@@ -1489,7 +1489,7 @@ const Profile = () => {
               </div>
             </div>
             <div className="container-fluid my-5 carousel-item ">
-              <div className="bg-dark  container shadow-lg p-3">
+              <div className="bg-darkblack  container shadow-lg p-3">
                 <div className="list-group">
                   <li className="list-group-item p-4">
                     <span className="font-weight-bold text-uppercase">
@@ -1534,7 +1534,7 @@ const Profile = () => {
               </div>
             </div>
             <div className="container-fluid my-5 carousel-item ">
-              <div className="bg-dark  container shadow-lg p-3">
+              <div className="bg-darkblack  container shadow-lg p-3">
                 <div className="list-group">
                   <li className="list-group-item p-4">
                     <span className="font-weight-bold text-uppercase">
@@ -1577,7 +1577,7 @@ const Profile = () => {
               </div>
             </div>
             <div className="container-fluid my-5 carousel-item ">
-              <div className="bg-dark  container shadow-lg p-3">
+              <div className="bg-darkblack  container shadow-lg p-3">
                 <div className="list-group">
                   <li className="list-group-item p-4">
                     <span className="font-weight-bold text-uppercase">
@@ -1614,7 +1614,7 @@ const Profile = () => {
               </div>
             </div>
             <div className="container-fluid my-5 carousel-item ">
-              <div className="bg-dark  container shadow-lg p-3">
+              <div className="bg-darkblack  container shadow-lg p-3">
                 <div className="list-group">
                   <li className="list-group-item p-4">
                     <span className="font-weight-bold text-uppercase">
@@ -1674,7 +1674,7 @@ const Profile = () => {
               </div>
             </div>
             <div className="container-fluid my-5 carousel-item ">
-              <div className="bg-dark  container shadow-lg p-3">
+              <div className="bg-darkblack  container shadow-lg p-3">
                 <div className="list-group">
                   <li className="list-group-item p-4">
                     <span className="font-weight-bold text-uppercase">
@@ -1746,7 +1746,7 @@ const Profile = () => {
               </div>
             </div>
             <div className="container-fluid my-5 carousel-item ">
-              <div className="bg-dark  container shadow-lg p-3">
+              <div className="bg-darkblack  container shadow-lg p-3">
                 <div className="list-group">
                   <li className="list-group-item p-4">
                     <span className="font-weight-bold text-uppercase">
@@ -1786,7 +1786,7 @@ const Profile = () => {
               </div>
             </div>
             <div className="container-fluid my-5 carousel-item ">
-              <div className="bg-dark  container shadow-lg p-3">
+              <div className="bg-darkblack  container shadow-lg p-3">
                 <div className="list-group">
                   <li className="list-group-item p-4">
                     <span className="font-weight-bold text-uppercase">
@@ -1828,7 +1828,7 @@ const Profile = () => {
               </div>
             </div>
             <div className="container-fluid my-5 carousel-item ">
-              <div className="bg-dark  container shadow-lg p-3">
+              <div className="bg-darkblack  container shadow-lg p-3">
                 <div className="list-group">
                   <li className="list-group-item p-4">
                     <span className="font-weight-bold text-uppercase">
@@ -1859,7 +1859,7 @@ const Profile = () => {
               </div>
             </div>
             <div className="container-fluid my-5 carousel-item ">
-              <div className="bg-dark  container shadow-lg p-3">
+              <div className="bg-darkblack  container shadow-lg p-3">
                 <div className="list-group">
                   <li className="list-group-item p-4">
                     <span className="font-weight-bold text-uppercase">
@@ -1895,7 +1895,7 @@ const Profile = () => {
               </div>
             </div>
             <div className="container-fluid my-5 carousel-item ">
-              <div className="bg-dark  container shadow-lg p-3">
+              <div className="bg-darkblack  container shadow-lg p-3">
                 <div className="list-group">
                   <li className="list-group-item p-4">
                     <span className="font-weight-bold text-uppercase">
@@ -1931,7 +1931,7 @@ const Profile = () => {
               </div>
             </div>
             <div className="container-fluid my-5 carousel-item ">
-              <div className="bg-dark  container shadow-lg p-3">
+              <div className="bg-darkblack  container shadow-lg p-3">
                 <div className="list-group">
                   <li className="list-group-item p-4">
                     <span className="font-weight-bold text-uppercase">
@@ -2025,7 +2025,7 @@ const Profile = () => {
           </div>
         </div>
         <button
-          className="container btn btn-block btn-warning my-3"
+          className="container btn btn-block btn-warning font-weight-bold text-uppercase mt-4"
           onClick={() => setEditing(true)}
           disabled={disabled}
         >
