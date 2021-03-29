@@ -1,7 +1,10 @@
 import { API } from "../../backend";
+
+//required for toast messages
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+//signup call to DB
 export const signup = (user) => {
   return fetch(`${API}/signup`, {
     method: "POST",
@@ -17,6 +20,7 @@ export const signup = (user) => {
     .catch((err) => console.log(err));
 };
 
+//signin call to DB
 export const signin = (user) => {
   return fetch(`${API}/signin`, {
     method: "POST",
@@ -32,6 +36,7 @@ export const signin = (user) => {
     .catch((err) => console.log(err));
 };
 
+//signout call to DB
 export const signout = (next) => {
   if (typeof window !== "undefined") {
     localStorage.removeItem("jwt");
@@ -56,6 +61,7 @@ export const signout = (next) => {
   />;
 };
 
+//storing values to local storage
 export const authenticate = (data, next) => {
   if (typeof window !== "undefined") {
     localStorage.setItem("jwt", JSON.stringify(data));
@@ -63,6 +69,7 @@ export const authenticate = (data, next) => {
   }
 };
 
+//checking authenticated or not by checking the local storage
 export const isAuthenticated = () => {
   if (typeof window == "undefined") {
     return false;
