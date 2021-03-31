@@ -1,0 +1,11 @@
+{
+    "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+    "editor.fontSize": 20,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.cursorWidth": 2,
+    "editor.formatOnSave": true,
+    "editor.suggest.shareSuggestSelections": true,
+    "emmet.includeLanguages": {
+        "\"javascript\"": " \"javascriptreact\""
+    }
+}
