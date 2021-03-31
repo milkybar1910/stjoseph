@@ -27,16 +27,16 @@ const Courses = () => {
 
   //Course Object
   const [courseInfo, setCourseInfo] = useState({
-    coursename: "",
-    platformname: "",
-    duration: "",
+    "Course Name": "",
+    "Platform Name": "",
+    Duration: "",
     To: "",
     From: "",
     formData: new FormData(),
   });
 
   //Destructing the Object
-  const { coursename, platformname, duration, To, From, formData } = courseInfo;
+  const { Duration, To, From, formData } = courseInfo;
 
   //Getting student details and token from Local Storage
   const { student, token } = isAuthenticated();
@@ -44,7 +44,7 @@ const Courses = () => {
   //handling input
   const handleChange = (name) => (event) => {
     const value =
-      name === "certificate" ? event.target.files[0] : event.target.value;
+      name === "Certificate" ? event.target.files[0] : event.target.value;
     formData.set(name, value);
     setCourseInfo({ ...courseInfo, [name]: value });
   };
@@ -73,9 +73,9 @@ const Courses = () => {
           toast.success(data.message);
           setCourseInfo({
             ...courseInfo,
-            coursename: "",
-            platformname: "",
-            duration: "",
+            "Course Name": "",
+            "Platform Name": "",
+            Duration: "",
             From: "",
             To: "",
             formData: new FormData(),
@@ -100,8 +100,8 @@ const Courses = () => {
           <input
             className="form-control"
             placeholder="Eg: Android Development"
-            value={coursename}
-            onChange={handleChange("coursename")}
+            value={courseInfo["Course Name"]}
+            onChange={handleChange("Course Name")}
           />
         </div>
         <div className="form-group ">
@@ -109,9 +109,9 @@ const Courses = () => {
           <input
             className="form-control"
             placeholder="Eg: Udemy "
-            value={platformname}
+            value={courseInfo["Platform Name"]}
             type="text"
-            onChange={handleChange("platformname")}
+            onChange={handleChange("Platform Name")}
           />
         </div>
         <div className="form-group">
@@ -121,8 +121,8 @@ const Courses = () => {
             name="duration"
             placeholder="Eg: 5 days or 2 weeks"
             className="form-control"
-            onChange={handleChange("duration")}
-            value={duration}
+            onChange={handleChange("Duration")}
+            value={Duration}
           />
         </div>
         <div className="form-group">
@@ -154,7 +154,7 @@ const Courses = () => {
             name="photo"
             placeholder="choose a file"
             className="form-control"
-            onChange={handleChange("certificate")}
+            onChange={handleChange("Certificate")}
             accept=".jpg, .jpeg, .png"
           />
         </div>

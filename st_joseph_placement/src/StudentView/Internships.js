@@ -27,25 +27,17 @@ const Internship = () => {
 
   //Internship Object
   const [internshipInfo, setInternshipInfo] = useState({
-    jobname: "",
-    organizationname: "",
-    duration: "",
-    location: "",
+    "Job Name": "",
+    "Organization Name": "",
+    Duration: "",
+    Location: "",
     From: "",
     To: "",
     formData: new FormData(),
   });
 
   //Destructing the Object
-  const {
-    jobname,
-    organizationname,
-    duration,
-    location,
-    From,
-    To,
-    formData,
-  } = internshipInfo;
+  const { Duration, Location, From, To, formData } = internshipInfo;
 
   //Getting the admin permission
   useEffect(() => {
@@ -61,7 +53,7 @@ const Internship = () => {
   //handling input
   const handleChange = (name) => (event) => {
     const value =
-      name === "certificate" ? event.target.files[0] : event.target.value;
+      name === "Certificate" ? event.target.files[0] : event.target.value;
     formData.set(name, value);
     setInternshipInfo({ ...internshipInfo, [name]: value });
   };
@@ -82,10 +74,12 @@ const Internship = () => {
           toast.success(data.message);
           setInternshipInfo({
             ...internshipInfo,
-            jobname: "",
-            organizationname: "",
-            duration: "",
-            location: "",
+            "Job Name": "",
+            "Organization Name": "",
+            Duration: "",
+            Location: "",
+            From: "",
+            To: "",
             formData: new FormData(),
           });
           setTimeout(() => setRedirect(true), 2000);
@@ -108,8 +102,8 @@ const Internship = () => {
           <input
             className="form-control"
             placeholder="Eg: Graphic Designer"
-            value={jobname}
-            onChange={handleChange("jobname")}
+            value={internshipInfo["Job Name"]}
+            onChange={handleChange("Job Name")}
           />
         </div>
         <div className="form-group ">
@@ -117,8 +111,8 @@ const Internship = () => {
           <input
             className="form-control"
             placeholder="Eg: CISCO"
-            value={organizationname}
-            onChange={handleChange("organizationname")}
+            value={internshipInfo["Organization Name"]}
+            onChange={handleChange("Organization Name")}
           />
         </div>
 
@@ -128,8 +122,8 @@ const Internship = () => {
             type="text"
             placeholder="Eg: 5 days or 2 weeks"
             className="form-control"
-            value={duration}
-            onChange={handleChange("duration")}
+            value={Duration}
+            onChange={handleChange("Duration")}
           />
         </div>
         <div className="form-group">
@@ -138,8 +132,8 @@ const Internship = () => {
             type="text"
             placeholder="Eg: Chennai"
             className="form-control"
-            value={location}
-            onChange={handleChange("location")}
+            value={Location}
+            onChange={handleChange("Location")}
           />
         </div>
         <div className="form-group">
@@ -172,7 +166,7 @@ const Internship = () => {
             name="certificate"
             placeholder="choose a file"
             className="form-control"
-            onChange={handleChange("certificate")}
+            onChange={handleChange("Certificate")}
             accept=".jpg, .jpeg, .png"
           />
         </div>

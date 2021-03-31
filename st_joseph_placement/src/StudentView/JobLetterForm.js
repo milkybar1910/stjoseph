@@ -29,22 +29,16 @@ const JobLetterForm = () => {
 
   //JobLetter Object
   const [jobInfo, setJobInfo] = useState({
-    jobtitle: "",
-    organizationname: "",
-    salary: "",
-    DateOfJoining: "",
-    OnCampusOrOffCampus: "",
+    "Job Title": "",
+    "Organization Name": "",
+    Salary: "",
+    "Date Of Joining": "",
+    "On Campus Or Off Campus": "",
     formData: new FormData(),
   });
 
   //Destructing the Object
-  const {
-    jobtitle,
-    organizationname,
-    formData,
-    salary,
-    DateOfJoining,
-  } = jobInfo;
+  const { formData } = jobInfo;
 
   //Getting student details and token from Local Storage
   const { student, token } = isAuthenticated();
@@ -52,9 +46,9 @@ const JobLetterForm = () => {
   //handling input
   const handleChange = (name) => (event) => {
     const value =
-      name === "certificate"
+      name === "Certificate"
         ? event.target.files[0]
-        : name === "OnCampusOrOffCampus"
+        : name === "On Campus Or Off Campus"
         ? event.value
         : event.target.value;
     formData.set(name, value);
@@ -77,10 +71,11 @@ const JobLetterForm = () => {
           toast.success(data?.message);
           setJobInfo({
             ...jobInfo,
-            jobtitle: "",
-            organizationname: "",
-            salary: "",
-            certificate: "",
+            "Job Title": "",
+            "Organization Name": "",
+            Salary: "",
+            "Date Of Joining": "",
+            "On Campus Or Off Campus": "",
             formData: new FormData(),
           });
           setTimeout(() => setRedirect(true), 2000);
@@ -111,8 +106,8 @@ const JobLetterForm = () => {
           <input
             className="form-control"
             placeholder="Eg: Software Developer"
-            value={jobtitle}
-            onChange={handleChange("jobtitle")}
+            value={jobInfo["Job Title"]}
+            onChange={handleChange("Job Title")}
           />
         </div>
         <div className="form-group ">
@@ -120,8 +115,8 @@ const JobLetterForm = () => {
           <input
             className="form-control"
             placeholder="Eg: PanTech "
-            value={organizationname}
-            onChange={handleChange("organizationname")}
+            value={jobInfo["Organization Name"]}
+            onChange={handleChange("Organization Name")}
           />
         </div>
         <div className="form-group ">
@@ -129,19 +124,18 @@ const JobLetterForm = () => {
           <input
             className="form-control"
             placeholder="Eg: 4 or 4.5 "
-            value={salary}
-            onChange={handleChange("salary")}
+            value={jobInfo["Salary"]}
+            onChange={handleChange("Salary")}
           />
         </div>
         <div className="form-group">
           <label className="text-white">Date Of Joining *</label>
           <input
             type="text"
-            name="duration"
             placeholder="Eg: 10/10/2021"
             className="form-control"
-            onChange={handleChange("DateOfJoining")}
-            value={DateOfJoining}
+            onChange={handleChange("Date Of Joining")}
+            value={jobInfo["Date Of Joining"]}
           />
         </div>
         <div className="form-group">
@@ -151,7 +145,7 @@ const JobLetterForm = () => {
               { value: "On Campus", label: "On Campus" },
               { value: "Off Campus", label: "Off Campus" },
             ]}
-            onChange={handleChange("OnCampusOrOffCampus")}
+            onChange={handleChange("On Campus Or Off Campus")}
           />
         </div>
         <div className="form-group">
@@ -161,7 +155,7 @@ const JobLetterForm = () => {
             name="certificate"
             placeholder="choose a file"
             className="form-control"
-            onChange={handleChange("certificate")}
+            onChange={handleChange("Certificate")}
             accept=".pdf"
           />
         </div>

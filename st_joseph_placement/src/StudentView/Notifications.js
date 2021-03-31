@@ -22,7 +22,7 @@ const Notifications = () => {
     const { student, token } = isAuthenticated();
 
     const getNotified = (studentPropertiesColumn) => {
-      return getNotifications(student.YearOfAdmission)
+      return getNotifications(student["Year Of Admission"])
         .then((data) => {
           let result = data.result.filter((data) => {
             return studentPropertiesColumn.includes(data._id) === false;
@@ -40,7 +40,6 @@ const Notifications = () => {
       return getNotified(studentCols);
     }
     StudentNotification();
-    // return getNotified(studentCols);
   }, [redirect]);
 
   const handleSubmit = (e, form) => {
