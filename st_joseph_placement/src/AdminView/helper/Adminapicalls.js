@@ -71,7 +71,6 @@ export const getJobOffer = (id, token, year) => {
 };
 
 export const updateFields = (id, token, Form) => {
-  console.log(Form);
   return fetch(`${API}/dynamicform/create/${id}`, {
     method: "POST",
     headers: {
@@ -82,7 +81,7 @@ export const updateFields = (id, token, Form) => {
     body: JSON.stringify(Form),
   })
     .then((response) => {
-      console.log(response.json());
+      return response.json();
     })
     .catch((err) => console.log(err));
 };
@@ -107,6 +106,33 @@ export const getToggleDetails = () => {
     method: "GET",
     headers: {
       Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => console.log(err));
+};
+
+export const getFormsNameInAdmin = () => {
+  return fetch(`${API}/formnames/details/`, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => console.log(err));
+};
+
+export const deleteForms = (id, year) => {
+  return fetch(`${API}/form/${id}/${year}`, {
+    method: "PUT",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
     },
   })
     .then((response) => {
