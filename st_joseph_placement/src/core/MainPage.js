@@ -3,6 +3,7 @@ import Signin from "./Signin";
 import Signup from "./Signup";
 import MainPageIllustraion from "../assets/svg/MainPageIllustration.js";
 import "../style.css";
+import Tilt from "react-tilt";
 
 const MainPage = () => {
   const [signup, setSignup] = useState(true);
@@ -26,7 +27,9 @@ const MainPage = () => {
       <div className="container-fluid my-4">
         <div className="row align-items-center">
           <div className=" col-sm-12 col-md-6 ">
-            <MainPageIllustraion />
+            <Tilt className="Tilt" options={{ max: 25 }}>
+              <MainPageIllustraion />
+            </Tilt>
           </div>
           <div className="col-sm-12 col-md-6">
             <div
